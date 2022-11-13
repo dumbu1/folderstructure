@@ -9,7 +9,7 @@ public class PropertyReader {
 	
 	private static FileInputStream propertyFile;
 	private static Properties obj_Properties;
-	private static String propertyFileName;
+	private String propertyFileName;
 	
 	//constructor
 	public PropertyReader(String propertyFileName) {
