@@ -16,18 +16,23 @@ public class DataDriven_SD {
 	
 	@Given("user is on {string} page")
 	public void user_is_on_home_page_with_title(String expectedPageTitle) {
+		
+		System.out.println("given");
 		SeleniumSpecificMethods.validate_PageTitle(expectedPageTitle);
 	}
 	
 	
 	@When("user clicks on {string} page")
+	
 	public void user_clicks_on_page(String string) {
+		System.out.println("when");
 	    
 	  HomePage obj_HomePage=new HomePage(DriverManager.getDriver());
 	    obj_HomePage.click_link();
 	}
 	@When("user enters names on text box and clicks on Submit button")
 	public void user_enters_on_text_box_and_clicks_on_button() {
+		System.out.println("when");
 
 	SeleniumTestExamplesPage obj_SeleniumTestExamplesPage=new SeleniumTestExamplesPage(DriverManager.getDriver());
 	obj_SeleniumTestExamplesPage.fillTheForm();

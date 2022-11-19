@@ -13,8 +13,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import constants.Constants;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class DriverManager {
 
@@ -39,22 +39,28 @@ public class DriverManager {
 	public WebDriver launchBrowser() {
 
 		//creating the object of PropertyReader by passing the property file name
-		PropertyReader obj_PropertyReader=new PropertyReader(Constants.getBrowser_Url_PropertiesFileName());
+		//PropertyReader obj_PropertyReader=new PropertyReader(Constants.getBrowser_Url_PropertiesFileName());
 		//to get the property values
-		getPropertiesFromPropertyReader=obj_PropertyReader.propertyReader();
+		getPropertiesFromPropertyReader=PropertyReader.getProperties(Constants.getBrowser_Url_PropertiesFileName());
 
+		System.out.println(getPropertiesFromPropertyReader);
 
 		try {
 
 
 			switch(getPropertiesFromPropertyReader.getProperty("browser")) {
 			case "chrome":
+				
 				ChromeOptions obj_chromeoOptions=new ChromeOptions();
 				obj_chromeoOptions.addArguments("InCognito");
 				obj_chromeoOptions.addArguments("start-maximized");
+				
+				
 
 				WebDriverManager.chromedriver().setup();
-				driver=new ChromeDriver(obj_chromeoOptions);
+				
+				DriverManager.setDriver(new ChromeDriver(obj_chromeoOptions));
+				//driver=new ChromeDriver(obj_chromeoOptions);
 
 				break;
 

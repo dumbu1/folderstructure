@@ -5,8 +5,8 @@ package testRuns;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.testng.CucumberOptions;
+import io.cucumber.junit.CucumberOptions;
+
 
 /*@ExtendedCucumberOptions(
 		
@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-		features="src/test/resources/features/dataDrivenTesting/feature1.feature",
+		features="src\\test\\resources\\features\\dataDrivenTesting\\feature1.feature",
 
 
 		glue = {"stepDefinations","hooks"},
@@ -36,7 +36,7 @@ import io.cucumber.testng.CucumberOptions;
 		)
 
 
-public class TestRunnerForDataDriven extends AbstractTestNGCucumberTests {
+public class TestRunnerForDataDriven {
 
 
 }
