@@ -56,6 +56,7 @@ public class Hooks {
 		LOGGER.info("Invoking the browser");
 		
 		if (DriverManager.getDriver()==null) {
+			
 			driver=obj_DriverManager.openUrl(obj_DriverManager.launchBrowser());
 			LOGGER.info("url opened");
 		}

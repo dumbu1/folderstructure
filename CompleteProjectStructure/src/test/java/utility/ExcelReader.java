@@ -28,9 +28,9 @@ public class ExcelReader {
 	public static XSSFSheet getSheetByName() {
 
 		//creating the object of PropertyReader by passing the property file name
-		PropertyReader obj_PropertyReader=new PropertyReader("excel");
+		//PropertyReader obj_PropertyReader=new PropertyReader("excel");
 		//to get the property values
-		getPropertiesFromPropertyReader=obj_PropertyReader.propertyReader();
+		getPropertiesFromPropertyReader=PropertyReader.getProperties("excel");
 
 		try {
 			excelPath= new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/excelSheets/"+getPropertiesFromPropertyReader.getProperty("filename")+".xlsx");
@@ -51,9 +51,9 @@ public class ExcelReader {
 	public static  XSSFSheet getSheetById() {
 
 		//creating the object of PropertyReader by passing the property file name
-		PropertyReader obj_PropertyReader=new PropertyReader("excel");
+		//PropertyReader obj_PropertyReader=new PropertyReader("excel");
 		//to get the property values
-		getPropertiesFromPropertyReader=obj_PropertyReader.propertyReader();
+		getPropertiesFromPropertyReader=PropertyReader.getProperties("excel");
 
 		try {
 			excelPath= new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/excelSheets/"+getPropertiesFromPropertyReader.getProperty("filename")+".xlsx");
