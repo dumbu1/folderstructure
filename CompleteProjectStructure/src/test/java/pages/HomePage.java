@@ -1,4 +1,4 @@
-package pages_objects;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,16 +21,12 @@ public class HomePage {
 		return new HomePage(DriverManager.getDriver());
 	}*/
 	
-	@FindBy(xpath = "//a[contains(text(),'Selenium Example Page')]")
-	private WebElement link_Selenium_Example_Page;
+	@FindBy(name = "Login")
+	private WebElement button_Login;
 	
 	
-	
-	
-	
-	
-	public void click_link() {
-		SeleniumSpecificMethods.click(link_Selenium_Example_Page);
+	public void click_Login() {
+		SeleniumSpecificMethods.click(button_Login);
 	}
 	
 }

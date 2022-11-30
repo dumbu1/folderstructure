@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 /*@ExtendedCucumberOptions(
-		
+
 		retryCount = 3
 		)*/
 @RunWith(Cucumber.class)
@@ -26,17 +26,17 @@ import io.cucumber.junit.CucumberOptions;
 
 				//for exten reports
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-		
+
 		//for running failed testcases
 		//"rerun:target/failedRerun.txt"
 		},*/
-		
+
 		dryRun = false,
 		monochrome = true
 		)
 
 
-public class TestRunnerForDataDriven {
+public class TestRunner_All {
 
 
 }
