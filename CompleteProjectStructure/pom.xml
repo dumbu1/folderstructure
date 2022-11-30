@@ -5,183 +5,114 @@
   <version>0.0.1-SNAPSHOT</version>
   
   
-  <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
-  
-  
-   <build>
-  <plugins>
-  
+
+
+<build>
+<plugins>
 <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M7</version>
+
+  <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
         <configuration>
-          <parallel>methods</parallel>
-          <threadCount>10</threadCount>
+          <source>1.8</source>
+          <target>1.8</target>
+        <fork>true</fork>
+       <compilerArgs>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+            <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
+        </compilerArgs>
+        <annotationProcessorPaths>
+            <path>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.16</version>
+            </path>
+        </annotationProcessorPaths>
         </configuration>
-      </plugin>
-  <!--  
-  <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M7</version>
-        <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>  
-      
-      -->     
-      
-        
- 
-   <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>3.0.0-M7</version>
-        <configuration>
-        
-        <includes>
-        <include>**\TestRunnerForDataDriven.java</include>
-        </includes>
-        
-          <parallel>methods</parallel>
-          <threadCount>10</threadCount>
-        </configuration>
-      </plugin>
-  
-  
-  <!--
-  <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
+
+</plugin>
+
+
+
+<plugin>
+
+  <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M6</version>
-        
-        
-       
-        <configuration>
+ <executions>
+ <execution>
+ <configuration>
         <includes>
-        <include>**\TestRunnerForDataDriven.java</include>
+        <include>**/TestRuns.java</include>
         </includes>
         
         </configuration>
-       
-        
-        
-       
+        </execution>
+   </executions>
+<!-- 
         <configuration>
         
         
           <parallel>methods</parallel>
           <threadCount>10</threadCount>
         </configuration>
-         
-        
-      </plugin>--> 
-      
-      
-  
-  </plugins>
-  
-  </build>
-  
-  
-  <dependencies>
-  
-  <dependency>
-  <groupId>org.projectlombok</groupId>
-  <artifactId>lombok</artifactId>
-  <version>1.18.22</version>
-</dependency>
-  
-  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        -->  
+</plugin>
+</plugins>
+</build>
+
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.6.0</version>
+    <version>4.2.1</version>
 </dependency>
-  
-  <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
-    <version>5.3.1</version>
+    <version>5.2.0</version>
 </dependency>
-
-  
-  
-  
-  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
     <version>6.11.0</version>
 </dependency>
-  
-  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-junit</artifactId>
     <version>6.11.0</version>
     <scope>test</scope>
 </dependency>
-  
-  
-  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>6.11.0</version>
-</dependency>
-
-  
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-core</artifactId>
     <version>6.11.0</version>
 </dependency>
-
-  
-  
-  
-  <!-- https://mvnrepository.com/artifact/junit/junit -->
+<!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
     <groupId>junit</groupId>
     <artifactId>junit</artifactId>
     <version>4.13.2</version>
     <scope>test</scope>
 </dependency>
-  
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.6.1</version>
-    <scope>test</scope>
-</dependency>
-
-
-<!-- ******************extentreports for reports*******************-->
-  
-  <dependency>
     <groupId>tech.grasshopper</groupId>
     <artifactId>extentreports-cucumber6-adapter</artifactId>
     <version>2.10.2</version>
-</dependency>
-
-
-
-<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>5.0.9</version>
 </dependency>
 
 
@@ -230,9 +161,16 @@
 
 
 
+<!--*******************for handling json file*************************-->
+<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1.1</version>
+</dependency>
 
 
-  </dependencies>
 
+</dependencies>
   
 </project>

@@ -104,12 +104,12 @@ public class Hooks {
 
 		}
 	}
-
+/*
 	//to close browser
 	@After(order = 1)
 	public void closeBrowser() {
 		driver.close();
 		driver.quit();
 	}
-
+*/
 }

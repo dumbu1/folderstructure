@@ -1,12 +1,16 @@
-19-11-2022---09:25:59.308 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
-19-11-2022---09:26:15.290 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:61)]-url opened
-19-11-2022---09:26:15.988 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
-19-11-2022---09:26:15.989 ERROR [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:65)]-Driver is not null
-19-11-2022---09:26:16.020 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
-19-11-2022---09:26:16.020 ERROR [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:65)]-Driver is not null
-19-11-2022---09:29:19.502 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
-19-11-2022---09:29:25.038 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:61)]-url opened
-19-11-2022---09:29:25.541 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
-19-11-2022---09:29:25.542 ERROR [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:65)]-Driver is not null
-19-11-2022---09:29:25.565 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
-19-11-2022---09:29:25.566 ERROR [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:65)]-Driver is not null
+30-11-2022---12:33:24.586 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
+30-11-2022---12:34:18.189 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:61)]-url opened
+30-11-2022---12:34:18.361 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
+30-11-2022---12:34:18.361 ERROR [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:65)]-Driver is not null
+30-11-2022---12:52:43.733 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
+30-11-2022---12:53:01.076 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:61)]-url opened
+30-11-2022---12:53:01.190 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
+30-11-2022---12:53:01.195 ERROR [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:65)]-Driver is not null
+30-11-2022---13:02:21.211 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
+30-11-2022---13:02:36.446 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:61)]-url opened
+30-11-2022---13:02:36.552 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
+30-11-2022---13:02:36.553 ERROR [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:65)]-Driver is not null
+30-11-2022---18:50:34.740 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
+30-11-2022---18:50:59.327 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:61)]-url opened
+30-11-2022---18:50:59.399 INFO [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:56)]-Invoking the browser
+30-11-2022---18:50:59.399 ERROR [main][hooks.Hooks.openBrowserAndUrl(Hooks.java:65)]-Driver is not null
